@@ -139,7 +139,7 @@ export default {
         document.title= 'CheckOut | ZimboShop'
         this.cart= this.$store.state.cart
         if (this.cartTotalLength > 0) {
-            this.stripe = Stripe('pk_test_51JAaOPGtyGRVpUD0g61fT2uk9xjAdNGL7IZSk41Bg0gREoEv9cgfpyQLVzOyzbSfQlisQ0pWmhEnKiK3kV30tS3Z00JG97LRLU')
+            this.stripe = Stripe('')
             const elements = this.stripe.elements();
             this.card = elements.create('card', { hidePostalCode: true })
             this.card.mount('#card-element')
